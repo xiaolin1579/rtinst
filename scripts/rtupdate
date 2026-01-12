@@ -30,7 +30,7 @@ if [ "$fullrelno" = "" ]; then
 fi
 
 
-sourcedir='https://rakshasa.github.io/rtorrent/'
+sourcedir='https://github.com/rakshasa/rtorrent'
 
 xmlrpc_url='https://svn.code.sf.net/p/xmlrpc-c/code/stable/'
 xmlrpcloc='svn://svn.code.sf.net/p/xmlrpc-c/code/stable/'
@@ -40,8 +40,8 @@ xmlrpcloc_alt='https://github.com/mirror/xmlrpc-c/trunk/stable'
 
 rtdevrel=1
 
-libvers='0.13.8'
-rtvers='0.9.8'
+libvers='0.16.6'
+rtvers='0.16.6'
 
 duoversion=''
 passed_rtvers=$1
