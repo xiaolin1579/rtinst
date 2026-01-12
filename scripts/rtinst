@@ -182,10 +182,10 @@ echo $ip_address
 PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/bin:/sbin
 
 # if left blank will install latest version of rtorrent, or set to a specific release E.G. '0.9.6' to install that release
-rtorrentrel='0.9.8'
+rtorrentrel='0.16.6'
 
 #url's of the major components
-rt_url="https://rakshasa.github.io/rtorrent/"
+rt_url="https://github.com/rakshasa/rtorrent"
 
 xmlrpc_url="https://svn.code.sf.net/p/xmlrpc-c/code/advanced/"
 xmlrpc_url_alt="https://github.com/mirror/xmlrpc-c"
@@ -252,6 +252,12 @@ fi
 if [ "$relno" = "22" ] || [ "$(lsb_release -sr)" = "22.04" ]; then
   phpver=php7.4
   phploc=/etc/php/7.4
+  libcver=libcurl4
+fi
+
+if [ "$relno" = "24" ] || [ "$(lsb_release -sr)" = "24.04" ]; then
+  phpver=php8.3
+  phploc=/etc/php/8.3
   libcver=libcurl4
 fi
 
@@ -611,13 +617,13 @@ if [ $osname = "Debian" ] && ! installed unrar; then
   do
     attempts=$(( $attempts + 1 ))
     if [ "$(uname -m)" = "x86_64" ]; then
-      wget http://www.rarlab.com/rar/rarlinux-x64-5.7.1.tar.gz >> $logfile 2>&1
-      tar xvzf rarlinux-x64-5.7.1.tar.gz >> $logfile 2>&1
-      rm rarlinux-x64-5.7.1.tar.gz
+      wget http://www.rarlab.com/rar/rarlinux-x64-712.tar.gz >> $logfile 2>&1
+      tar xvzf rarlinux-x64-712.tar.gz >> $logfile 2>&1
+      rm rarlinux-x64-712.tar.gz
     elif [ "$(uname -m)" = "x86_32" ]; then
-      wget http://www.rarlab.com/rar/rarlinux-5.7.1.tar.gz >> $logfile 2>&1
-      tar xvzf rarlinux-5.7.1.tar.gz >> $logfile 2>&1
-      rm rarlinux-5.7.1.tar.gz
+      wget http://www.rarlab.com/rar/rarlinux-712.tar.gz >> $logfile 2>&1
+      tar xvzf rarlinux-712.tar.gz >> $logfile 2>&1
+      rm rarlinux-712.tar.gz
     fi
   done
   if [ -d rar ]; then
