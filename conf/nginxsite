@@ -1,6 +1,6 @@
 server {
-        listen 8282;
-        listen [::]:8282;
+        listen 80;
+        listen [::]:80;
         #server_name <Domain Name>;
         root /var/www;
         
