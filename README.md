@@ -8,7 +8,7 @@ Ubuntu and Debian Seedbox Installation
 
 Download and run setup (if logged in directly as root, do not need to use sudo)
 
-	sudo bash -c "$(wget --no-check-certificate -qO - https://raw.githubusercontent.com/arakasi72/rtinst/master/rtsetup)"
+	sudo bash -c "$(wget --no-check-certificate -qO - https://raw.githubusercontent.com/xiaolin1579/rtinst/master/rtsetup)"
 
 and then to run the main script, ([check the options you can use](https://github.com/arakasi72/rtinst/wiki/Guide#21-main-script-options)):
 
@@ -30,6 +30,8 @@ Current release has been tested with clean installs of:
 	Ubuntu 18
 	Ubuntu 19
 	Ubuntu 20
+	Ubuntu 22
+	Ubuntu 24
 	Debian 9 "Stretch"
 	Debian 10 "Buster"
 
